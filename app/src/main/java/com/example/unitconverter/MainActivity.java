@@ -65,12 +65,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_compute = (Button) findViewById(R.id.btn_compute);
-        btn_reset = (Button) findViewById(R.id.btn_reset);
-        edt_m = (EditText) findViewById(R.id.edt_m);
-        edt_cm = (EditText) findViewById(R.id.edt_cm);
-        edt_km = (EditText) findViewById(R.id.edt_km);
-        edt_i = (EditText) findViewById(R.id.edt_i);
+        btn_compute = findViewById(R.id.btn_compute);
+        btn_reset = findViewById(R.id.btn_reset);
+        edt_m = findViewById(R.id.edt_m);
+        edt_cm = findViewById(R.id.edt_cm);
+        edt_km = findViewById(R.id.edt_km);
+        edt_i = findViewById(R.id.edt_i);
 
         btn_reset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         btn_compute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (edt_m.getText().toString().length() != 0){
+                if (edt_m.getText().toString().length() != 0) {
                     computeByMeter();
                 } else if (edt_cm.getText().toString().length() != 0) {
                     computeByCentimeter();
